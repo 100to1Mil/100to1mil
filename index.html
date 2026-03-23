@@ -994,25 +994,25 @@
       // Day P&L dollar
       const dayDollar = r.change != null ? `${up?'+':'-'}$${fmt(Math.abs(r.change * r.shares))}` : '';
 
-      return \`
+      return `
       <div class="pos-row">
         <div>
-          <div class="pos-sym">\${r.sym}</div>
-          <div class="pos-name">\${r.name}</div>
+          <div class="pos-sym">${r.sym}</div>
+          <div class="pos-name">${r.name}</div>
         </div>
         <div>
-          <div class="pos-price">\${val}</div>
-          <div class="pos-sub">\${price}/sh</div>
+          <div class="pos-price">${val}</div>
+          <div class="pos-sub">${price}/sh</div>
         </div>
         <div>
-          <div class="pos-chg \${openCls}">\${openAmt}</div>
-          <div class="pos-chg-sub \${openCls}">\${openPctStr}</div>
+          <div class="pos-chg ${openCls}">${openAmt}</div>
+          <div class="pos-chg-sub ${openCls}">${openPctStr}</div>
         </div>
         <div>
-          <div class="pos-chg \${dayCls}">\${dayArr} \${dayDollar}</div>
-          <div class="pos-chg-sub \${dayCls}">\${dayPct}</div>
+          <div class="pos-chg ${dayCls}">${dayArr} ${dayDollar}</div>
+          <div class="pos-chg-sub ${dayCls}">${dayPct}</div>
         </div>
-      </div>\`;
+      </div>`;
     }).join('');
 
     document.getElementById('posTable').innerHTML = header + body;
