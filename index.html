@@ -696,7 +696,7 @@
       <div class="day-num" id="dayCount">--</div>
       <div>
         <div class="day-label">Days Into The Journey</div>
-        <div class="day-sub">📅 Started January 16, 2026</div>
+        <div class="day-sub">📅 Started January 1, 2026</div>
         <div class="day-live">⚡ Prices auto-update every 30s</div>
       </div>
     </div>
@@ -893,7 +893,7 @@
   const DETAILING_TOTAL    = 200.00; // 🚗 Total earned from detailing
   const DETAILING_INVESTED = 0.00;   // 🚗 Amount invested into portfolio (already counted there)
 
-  const MISC_TOTAL         = 350.00; // ⚡ Total earned from misc hustles
+  const MISC_TOTAL         = 390.00; // ⚡ Total earned from misc hustles
   const MISC_INVESTED      = 0.00;   // ⚡ Amount invested into portfolio (already counted there)
   // ─────────────────────────────────────────────────────────────
 
@@ -912,18 +912,19 @@
   renderHustles();
 
   const HOLDINGS = [
-    { sym:'VOO',  name:'Vanguard S&P 500 ETF',           shares:1.93594,  cost:606.04  },
+    { sym:'VOO',  name:'Vanguard S&P 500 ETF',           shares:1.70938,  cost:606.04  },
     { sym:'VGT',  name:'Vanguard Info Technology ETF',   shares:7.47512,  cost:93.363  },
     { sym:'AMZN', name:'Amazon',                         shares:1.21677,  cost:175.37  },
     { sym:'NBIS', name:'Nebius Group',                   shares:1,        cost:112.88  },
-    { sym:'RKLB', name:'Rocket Lab USA',                 shares:0.55397,  cost:90.26   },
+    { sym:'RKLB', name:'Rocket Lab USA',                 shares:0.96683,  cost:90.26   },
+    { sym:'CELC', name:'Celcuity Inc',                   shares:1.39178,  cost:143.70  },
     { sym:'DNLI', name:'Denali Therapeutics',            shares:6,        cost:21.33   },
-    { sym:'TCMD', name:'Tactile Systems',                shares:4.57895,  cost:27.30   },
-    { sym:'ASTS', name:'AST SpaceMobile',                shares:0.45,     cost:83.33   },
+    { sym:'TCMD', name:'Tactile Systems',                shares:2.35574,  cost:27.30   },
+
   ];
 
   // Day counter
-  const start = new Date('2026-01-16');
+  const start = new Date('2026-01-01');
   const msDay = 864e5;
   document.getElementById('dayCount').textContent =
     Math.max(1, Math.floor((Date.now() - start) / msDay) + 1);
